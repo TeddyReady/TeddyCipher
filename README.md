@@ -1,6 +1,6 @@
 # TeddyCipher
 Text Cipher from cyrillic based on Qt
-## Building
+## Building on Linux
 1. Clone this repo:
 
         git clone https://github.com/TeddyReady/TeddyCipher.git && cd TeddyCipher
@@ -11,8 +11,8 @@ Text Cipher from cyrillic based on Qt
 
 3. Run qmake && make:
 
-        ../qmake && make -j4
+        qmake .. && make -j4
         
 4. Run application:
     
-        ./TeddyCipher
+        ./TeddyEncryption 
