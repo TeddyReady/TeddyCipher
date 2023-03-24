@@ -9,6 +9,7 @@
 #include <QMap>
 #include <QPushButton>
 #include <QTextEdit>
+#include <cmath>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class CipherWindow; }
@@ -24,11 +25,18 @@ public:
 
 private slots:
     void encrypt();
+    void decrypt();
 private:
-    QString bin(QString str) { return str.setNum(str.toInt(), 2);}
+    QString bin(QString str);
     bool norm(QString binNum);
     QString rotate(QString str, int shift);
     QString table(QString base, QString binCode);
+    QString getCode(QString table, QString symbol, int shift, int phase);
+    QString setMesh(QString shiferText, int meshValue);
+
+    QString removeMesh(QString shiferText, int meshValue);
+    QString getSourceCode(QString table, QString shiferText, int shift, int phase);
+    QString fromBinToDec(QString bin);
 
     QMap<QString, QString> alphabet;
     QString curTable;
